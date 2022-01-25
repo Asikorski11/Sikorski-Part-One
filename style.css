@@ -9,15 +9,18 @@ body {
 header {
     font-family: 'Work sans', sans-serif;
     background-color: #70a48b;
-    text-align: left;
+    text-align: right;
     align-Items: left;
     padding: 10px;
+    display: flex;
     flex-direction: column;
 }
 
 div {
-    position: fixed;
-    width: 100%;
+    display: flex;
+    flex-direction: right;
+    flex-wrap: wrap;
+    width: 50%;
     top: 5%;
     right: 2%;
     align-items: center;
@@ -32,7 +35,7 @@ div {
     color: white;
     border-radius: 20px;
     border: 1px solid #1f211c;
-    padding: 6px 5px;
+    padding: 6px 8px;
 }
 
 .menu ul {
@@ -40,16 +43,17 @@ div {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        padding-left: 0;
-        margin: 5px;
+        padding-left: 6px;
+        margin: 1.5px;
 }
 
 .container {
-    width: 5%;
-    border: 2px solid white;
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 3px solid white;
     border-radius: 10px;
-    margin-top: 5px;
+    padding: 0.2%;
 }
 
 a:link, a:visited {
@@ -57,11 +61,13 @@ a:link, a:visited {
     color: white;
     text-align: center;
     text-decoration: none;
-    display:inline-block
+    display: flex;
+    flex-direction: row;
 }
 
 button {
-    display: block;
+    display: flexbox;
+    flex-direction: right;
     background-color: #70a48b;
         width: 330px;
         height: 40px;
@@ -81,30 +87,33 @@ h2 {
     justify-content: flex-end;
     flex-direction: column;
     align-items: left;
-    position: fixed;
+    padding-left: 6px;
     top: 25%;
     right: 40%;
   }
 
   p1 {
-      position: fixed;
+      display: flex;
       top: 35%;
       right: 65%;
       align-content: left;
+      padding-left: 6px;
   }
 
   p2 {
-      position: fixed;
+      display: flex;
       top: 40%;
       right: 65%;
       align-content: left;
+      padding-left: 6px;
   }
 
   .container2 {
-      position: fixed;
+      display: flex;
+      flex-direction: right;
+      flex-wrap: wrap;
       top: 20%;
       left: 40%;
-      align-content: right;
   }
 
   section2 {
@@ -112,39 +121,36 @@ h2 {
     flex-direction: column;
 }
 
+.container3 {   
+    display: flex;
+    flex-direction: right;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    right: 5%;
+}       
+
 .image mobile-spacer {
-    position: fixed;
-    top: 40%;
-    right: 55%;
+    width: 50%;
 }
 
 .image spacer {
-    position: fixed;
-    top: 40%;
-    right: 45%;
+    width: 50%;
 }
 
-.container3 {   
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}       
-
 .image {
-    width: 45%;
-    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .image spacer mobile-spacer {
-    border-radius: 10px;
-    width: 100%;
+    width: 50%;
 }
 
 footer {
     background-color: #70a48b;
-    position: fixed;
-    bottom: 5%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }    
 
 .footer-logo img {
@@ -154,8 +160,10 @@ footer {
 
   @media screen and (min-width: 768px) {
     header {
+        display: flex;
         justify-content:space-between;
         flex-direction: row;
+        flex-wrap: wrap;
     }
     .container {
         width: 20%;
@@ -167,20 +175,24 @@ footer {
     section2 {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         width: 66%;
     }
     .content-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-between;
-        flex-direction: row;
     }
     .image {
-        width: 30%;
+        display: flex;
+        align-items: center;
     }
     div.spacer {
-        margin: 0 15px;
+        width: 50%;
     }
     
     .mobile-spacer {
-        margin-right: 0px;
+        width: 50%;
     }
-}  
+}    
